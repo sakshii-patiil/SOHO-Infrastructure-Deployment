@@ -121,9 +121,7 @@ ip dhcp pool CS-Pool
 
 ## 🖼️ Network Topology
 
-> 📷 **[Insert Screenshot Below]**
-
-Add your Packet Tracer network implementation screenshot here:
+Packet Tracer network implementation screenshot here:
 
 ![Implemented Network Topology](images/SOHO.png)
 
