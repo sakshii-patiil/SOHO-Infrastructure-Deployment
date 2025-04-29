@@ -80,22 +80,54 @@ interface Gig0/0/0.20
 interface Gig0/0/0.30
  encapsulation dot1Q 30
  ip address 192.168.1.128 255.255.255.192
+```
+---
+
+### 🛠 DHCP Configuration
+
+```bash
+serv dhcp
+ip dhcp pool Admin-Pool
+ network 192.168.1.0 255.255.255.192
+ default-router 192.168.1.1
+ dns-server 192.168.1.1
+ domain-name Admin.com
+
+ip dhcp pool Finance-Pool
+ network 192.168.1.64 255.255.255.192
+ default-router 192.168.1.65
+ dns-server 192.168.1.65
+ domain-name Finance.com
+
+ip dhcp pool CS-Pool
+ network 192.168.1.128 255.255.255.192
+ default-router 192.168.1.129
+ dns-server 192.168.1.129
+ domain-name CS.com
+```
+
+---
 
 ## 🔐 Protocols Used
 
-| Protocol   | Purpose                                     |
-|------------|---------------------------------------------|
-| **DHCP**   | Dynamic IP assignment to host devices       |
-| **802.1Q** | VLAN trunking between router and switch     |
-| **ICMP**   | Testing network connectivity using `ping`   |
-| **ARP**    | Resolving IP to MAC addresses on the network|
+| Protocol         | Purpose                                |
+|------------------|----------------------------------------|
+| **DHCP**         | Dynamic IP assignment                  |
+| **802.1Q**       | VLAN trunking between router and switch|
+| **ICMP**         | Connectivity testing (ping)            |
+| **ARP**          | Local address resolution               |
 
 ---
 
 ## 🖼️ Network Topology
 
-```markdown
+> 📷 **[Insert Screenshot Below]**
+
+Add your Packet Tracer network implementation screenshot here:
+
 ![Implemented Network Topology](images/SOHO.png)
+
+---
 
 
 
